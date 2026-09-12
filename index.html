@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HC Construcción en Seco - Humberto Catania">
+<title>Humberto Catania | Construcción en Seco</title>
+<style>
+:root{--y:#ffd800;--b:#0a0a0a;--b2:#151515;--g:#252525;--w:#fff;--m:#bdbdbd}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--b);color:#eee;line-height:1.6}
+a{text-decoration:none;color:inherit}button{font:inherit}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#090909ee;border-bottom:1px solid #ffd80033}
+.nav{max-width:1150px;margin:auto;min-height:68px;padding:8px 18px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}.brand img{width:44px;height:44px;border-radius:50%;object-fit:contain;background:white}.brand b{color:var(--y)}
+.links{display:flex;gap:22px;list-style:none;font-weight:700}.links a:hover{color:var(--y)}
+.hero{min-height:100vh;padding:115px 20px 70px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 30%,#ffd80018,transparent 35%),linear-gradient(#111,#050505)}
+.hero img{width:165px;height:165px;object-fit:contain;background:white;border-radius:50%;padding:8px;margin-bottom:20px}
+.eyebrow{color:var(--y);font-weight:800;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1;text-transform:uppercase;margin:10px 0 18px;color:white}h1 span{color:var(--y)}
+.hero p{max-width:720px;margin:auto;color:#ddd;font-size:1.15rem}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn,.more{display:inline-flex;justify-content:center;align-items:center;padding:12px 20px;border-radius:10px;border:2px solid var(--y);font-weight:900;cursor:pointer;transition:.2s}
+.btn{background:var(--y);color:#000}.btn.secondary{background:transparent;color:#fff}.btn:hover,.more:hover{transform:translateY(-2px)}
+section{max-width:1150px;margin:auto;padding:90px 20px}.title{text-align:center;margin-bottom:42px}.title h2{font-size:clamp(2rem,5vw,3.1rem);color:#fff}.line{width:65px;height:5px;background:var(--y);margin:13px auto;border-radius:9px}.title p{color:var(--m);max-width:720px;margin:auto}
+.about,.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.card{background:linear-gradient(145deg,#191919,#101010);border:1px solid #2c2c2c;border-radius:18px;padding:28px}.card h3{color:var(--y);font-size:1.55rem;margin-bottom:12px}.card p{color:#d0d0d0}
+.fact{background:#171717;border-left:4px solid var(--y);border-radius:10px;padding:15px;margin-bottom:12px}.fact strong{display:block;color:#fff}.fact span{color:#bbb}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.category{background:#141414;border:1px solid #2b2b2b;border-radius:18px;overflow:hidden}.head{min-height:175px;padding:25px;text-align:center;display:flex;flex-direction:column;justify-content:center}.icon{font-size:3rem}.head h3{font-size:1.6rem;color:#fff}.more{width:calc(100% - 40px);margin:0 20px 20px;background:transparent;color:var(--y)}
+.content{max-height:0;overflow:hidden;padding:0 20px;transition:max-height .6s ease,padding .4s ease}.category.open .content{max-height:1200px;padding:0 20px 22px}
+.bio{background:#1c1c1c;border:1px solid #303030;border-radius:12px;padding:20px;margin-bottom:18px}.bio p{font-size:1.15rem;line-height:1.75;color:#eee}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:9px;cursor:pointer;border:1px solid #333;transition:.2s}.gallery img:hover{transform:scale(1.025);filter:brightness(1.12)}
+.hint{text-align:center;color:#888;font-size:.8rem;margin-top:8px}
+.lightbox{position:fixed;inset:0;z-index:3000;background:#000f;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.show{display:flex}.lightbox img{max-width:96vw;max-height:88vh;object-fit:contain;border-radius:8px}.close{position:absolute;right:18px;top:16px;width:50px;height:50px;border:2px solid white;border-radius:50%;background:#0009;color:white;font-size:32px;cursor:pointer}
+.contact-item{padding:13px 0;border-bottom:1px solid #292929}.contact-item strong{display:block;color:white}.contact-item a{color:#ccc}.contact-item a:hover{color:var(--y)}
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;font-size:27px;font-weight:900;z-index:1200;box-shadow:0 8px 30px #0008}
+footer{text-align:center;padding:28px 15px;border-top:1px solid #252525;color:#888}footer b{color:var(--y)}
+@media(max-width:850px){.categories{grid-template-columns:1fr}.about,.contact{grid-template-columns:1fr}}
+@media(max-width:600px){.links{gap:9px;font-size:.88rem}.links li:nth-child(2){display:none}.brand{font-size:.9rem}.hero img{width:135px;height:135px}section{padding:72px 14px}.bio p{font-size:1.08rem}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><a class="brand" href="#inicio"><img src="logo.jpg" alt="Logo Humberto Catania"><span>HC <b>Construcción en Seco</b></span></a><ul class="links"><li><a href="#inicio">Inicio</a></li><li><a href="#empresa">Empresa</a></li><li><a href="#obras">Obras</a></li><li><a href="#contacto">Contacto</a></li></ul></div></nav>
+
+<header class="hero" id="inicio">
+<div><img src="logo.jpg" alt="Humberto Catania - Construcción en Seco"><div class="eyebrow">Humberto Catania</div><h1>Construcción <span>en seco</span></h1><p>Materiales, instalaciones y proyectos personalizados. Soluciones en construcción en seco y aislamiento con celulosa en Tunuyán.</p><div class="buttons"><a class="btn" href="#obras">Ver nuestras obras</a><a class="btn secondary" href="#contacto">Contactarnos</a></div></div>
+</header>
+
+<section id="empresa"><div class="title"><h2>Sobre nosotros</h2><div class="line"></div><p>Conocé HC Construcción en Seco y nuestras soluciones.</p></div>
+<div class="about"><div class="card"><h3>HC Construcción en Seco</h3><p>Local comercial dedicado a la venta de materiales para la construcción en seco, además de instalaciones y proyectos personalizados. También realizamos trabajos de aislamiento con celulosa.</p></div>
+<div><div class="fact"><strong>📍 Ubicación</strong><span>Sáenz Peña N° 1351, Tunuyán, Mendoza</span></div><div class="fact"><strong>🧱 Especialidad</strong><span>Construcción en seco, materiales y aislamiento.</span></div><div class="fact"><strong>🛠️ Atención personalizada</strong><span>Instalaciones y proyectos adaptados a cada obra.</span></div></div></div></section>
+
+<section id="obras"><div class="title"><h2>Conocé nuestras obras</h2><div class="line"></div><p>Tocá <b>VER MÁS</b> para mostrar la descripción y las fotos. Tocá una foto para verla en grande.</p></div>
+<div class="categories">
+
+<article class="category" id="construccion"><div class="head"><div class="icon">🏗️</div><h3>Construcción en seco</h3></div><button class="more" onclick="toggle('construccion',this)">VER MÁS ↓</button><div class="content"><div class="bio"><p>Soluciones para proyectos de construcción en seco, desde la estructura hasta las terminaciones. Trabajamos en obras nuevas y proyectos personalizados.</p></div><div class="gallery"><img src="construccion-1.jpg" alt="Construcción en seco" onclick="zoom(this.src)"><img src="construccion-2.jpg" alt="Nuestra construcción en seco" onclick="zoom(this.src)"><img src="construccion-3.jpg" alt="Obra de construcción en seco" onclick="zoom(this.src)"></div><div class="hint">Tocá una imagen para verla en grande</div></div></article>
+
+<article class="category" id="materiales"><div class="head"><div class="icon">📦</div><h3>Materiales</h3></div><button class="more" onclick="toggle('materiales',this)">VER MÁS ↓</button><div class="content"><div class="bio"><p>Todos los materiales que necesitás para la construcción en seco: perfiles, placas, masillas, tornillos y mucho más.</p></div><div class="gallery"><img src="materiales-1.jpg" alt="Materiales para construcción en seco" onclick="zoom(this.src)"><img src="materiales-2.jpg" alt="Local Humberto Catania" onclick="zoom(this.src)"><img src="materiales-3.jpg" alt="Humberto Catania en obra" onclick="zoom(this.src)"></div><div class="hint">Tocá una imagen para verla en grande</div></div></article>
+
+<article class="category" id="aislamiento"><div class="head"><div class="icon">♻️</div><h3>Aislamiento</h3></div><button class="more" onclick="toggle('aislamiento',this)">VER MÁS ↓</button><div class="content"><div class="bio"><p>Aislamiento con celulosa en techos y paredes en construcciones existentes y nuevas.</p></div><div class="gallery"><img src="aislamiento-1.jpg" alt="Aislamiento con celulosa" onclick="zoom(this.src)"><img src="aislamiento-2.jpg" alt="Celulosa aplicada en techo" onclick="zoom(this.src)"><img src="aislamiento-3.jpg" alt="Celulosa aplicada en paredes" onclick="zoom(this.src)"></div><div class="hint">Tocá una imagen para verla en grande</div></div></article>
+
+</div></section>
+
+<section id="contacto"><div class="title"><h2>Contacto</h2><div class="line"></div><p>Consultanos por materiales, instalaciones o tu próximo proyecto.</p></div>
+<div class="contact"><div class="card"><h3>Encontranos</h3><div class="contact-item"><strong>📍 Dirección</strong><span>Sáenz Peña N° 1351, Tunuyán, Mendoza, 5560</span></div><div class="contact-item"><strong>📞 WhatsApp</strong><a href="https://wa.me/5492622525036" target="_blank">02622 52-5036</a></div><div class="contact-item"><strong>📸 Instagram</strong><a href="https://www.instagram.com/construccionenseco.hc/" target="_blank">@construccionenseco.hc</a></div><div class="buttons"><a class="btn" href="https://wa.me/5492622525036" target="_blank">WhatsApp</a><a class="btn secondary" href="https://www.instagram.com/construccionenseco.hc/" target="_blank">Instagram</a></div></div>
+<div class="card"><h3>¿Tenés un proyecto?</h3><p>Contanos qué necesitás y consultá por materiales, construcción en seco, instalaciones o aislamiento con celulosa.</p></div></div></section>
+
+<a class="wa" href="https://wa.me/5492622525036" target="_blank" aria-label="WhatsApp">☎</a>
+<footer>© 2026 <b>Humberto Catania</b> · HC Construcción en Seco</footer>
+
+<div class="lightbox" id="lb" onclick="closeZoom(event)"><button class="close" onclick="closeZoom()">×</button><img id="big" alt="Imagen ampliada"></div>
+<script>
+function toggle(id,b){let c=document.getElementById(id);let open=c.classList.toggle('open');b.textContent=open?'VER MENOS ↑':'VER MÁS ↓'}
+function zoom(src){document.getElementById('big').src=src;document.getElementById('lb').classList.add('show');document.body.style.overflow='hidden'}
+function closeZoom(e){if(e&&e.target.id==='big')return;document.getElementById('lb').classList.remove('show');document.getElementById('big').src='';document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()})
+</script>
+</body>
+</html>
